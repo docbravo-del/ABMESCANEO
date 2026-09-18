@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "ABMESCANEO",
+  "short_name": "ABMESCANEO",
+  "description": "Escáner de documentos a PDF. Estudio Jurídico AJA-BRAVO-MIOZZI — Ituzaingó 1217, planta alta, Lanús Este. Aplicación creada por el Dr. Andrés Bravo.",
+  "lang": "es-AR",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0F2A44",
+  "theme_color": "#0F2A44",
+  "categories": ["productivity", "business"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

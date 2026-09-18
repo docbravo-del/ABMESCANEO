@@ -1,0 +1,68 @@
+ABMESCANEO — aplicación web para iPhone (PWA)
+=============================================
+Aplicación creada por el Dr. Andrés Bravo
+Estudio Jurídico AJA-BRAVO-MIOZZI · Ituzaingó 1217, planta alta, Lanús Este, Prov. Bs. As.
+
+Qué hace
+--------
+- Foto con la cámara o imágenes de Fotos (varias a la vez).
+- Recorte con corrección de perspectiva: 4 esquinas con lupa, botón Rotar y Toda la foto.
+- Filtros: Original, Mejorado (fondo blanco; firmas y sellos conservan su color), Blanco y negro.
+- DNI frente y dorso en una hoja A4 a tamaño real (85,6 × 54 mm).
+- Numeración "Página X de N" y marca de agua diagonal (COPIA, CONFIDENCIAL, etc.).
+- Guardar en Archivos, enviar por WhatsApp, Mail, imprimir o AirDrop (menú Compartir de iOS).
+- Funciona sin conexión y recupera el documento en curso si la app se cierra.
+- Todo se procesa en el teléfono: las fotos no se suben a ningún servidor.
+
+
+PASO 1 — Publicar la carpeta en internet (una sola vez)
+-------------------------------------------------------
+El iPhone solo instala apps web desde una dirección https://. Subir el CONTENIDO de esta
+carpeta (index.html, app.js, sw.js, manifest.webmanifest y la carpeta icons) a un hosting.
+
+Opción A — GitHub Pages (gratis y permanente)
+  1. Crear una cuenta en github.com.
+  2. "New repository" → nombre: abmescaneo → Public → Create repository.
+  3. "uploading an existing file" → arrastrar todos los archivos y la carpeta icons → Commit changes.
+  4. Settings → Pages → Source: "Deploy from a branch" → Branch: main / (root) → Save.
+  5. A los pocos minutos queda en: https://SU-USUARIO.github.io/abmescaneo/
+  (El repositorio público contiene solo el programa, nunca los documentos escaneados.)
+
+Opción B — Netlify Drop (arrastrar y soltar)
+  1. Entrar a https://app.netlify.com/drop y arrastrar esta carpeta.
+  2. Crear la cuenta gratuita y "reclamar" (claim) el sitio para que no se borre.
+  3. Usar la dirección https://....netlify.app que asigna Netlify.
+
+Opción C — Hosting propio del estudio
+  Subir la carpeta a un subdirectorio del sitio (por ejemplo https://SU-DOMINIO/escaner/).
+  Debe ser https.
+
+
+PASO 2 — Instalar en cada iPhone
+--------------------------------
+  1. Abrir la dirección en Safari.
+  2. Tocar el botón Compartir (cuadrado con flecha hacia arriba).
+  3. Elegir "Agregar a pantalla de inicio" (si no aparece, deslizar o tocar "Ver más") → Agregar.
+  4. Abrir ABMESCANEO desde el ícono. La primera vez, permitir el acceso a la cámara.
+
+
+Cómo guardar y enviar en iPhone
+-------------------------------
+- "Guardar en el iPhone" abre el menú Compartir → elegir "Guardar en Archivos".
+- "Enviar por WhatsApp" abre el menú Compartir → elegir WhatsApp → elegir el chat.
+- "Mail, imprimir u otra app" → Mail, Imprimir, AirDrop, Drive, etc.
+
+
+Limitación de iOS
+-----------------
+Apple no permite que una app web aparezca en el menú "Compartir" de otras apps.
+Para convertir fotos que llegan por WhatsApp: en WhatsApp, abrir la foto → Guardar
+(queda en Fotos) → en ABMESCANEO tocar "Elegir de Fotos".
+(En Android, para eso está la app ABMESCANEO.apk.)
+
+
+Actualizar la app más adelante
+------------------------------
+Subir los archivos nuevos al mismo lugar y cambiar en sw.js la línea
+  const CACHE = 'abmescaneo-v2';   →   'abmescaneo-v3'
+Los iPhone toman la versión nueva la siguiente vez que abren la app con conexión.
